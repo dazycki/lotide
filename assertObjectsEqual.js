@@ -1,5 +1,16 @@
+// FUNCTION IMPLEMENTATION EQUAL ARRAYS
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) return false;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 // FUNCTION IMPLEMENTATION EQUAL OBJECTS
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   let objKeys1 = Object.keys(object1);
   objKeys1.sort();
   let objKeys2 = Object.keys(object2);
@@ -21,7 +32,7 @@ const eqObjects = function (object1, object2) {
 };
 
 // FUNCTION IMPLEMENTATION ASSERT EQUAL OBJECTS
-const assertObjectsEqual = function (actual, expected) {
+const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected) === true) {
     console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
