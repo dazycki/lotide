@@ -1,14 +1,11 @@
-// FUNCTION IMPLEMENTATION
+// FUNCTION IMPLEMENTATION FOR ASSERT EQUAL
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`); //Will be returned if actual is the same as expected
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`); //Will be returned if actual is NOT the same as expected
   }
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp"); //Comparing non-identical strings
-assertEqual(1, 1); //Comparing identical numbers
-assertEqual("test", "test"); //Comparing identical strings
-assertEqual(4, 1); // Comparing non-identical numbers
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = assertEqual;
