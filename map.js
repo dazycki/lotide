@@ -17,9 +17,8 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
-// FUNCTION IMPLEMENTATION MAPS
+// FUNCTION IMPLEMENTATION MAP
 const words = ["ground", "control", "to", "major", "tom"];
-const words2 = ["cherry", "ruby", "pink", "rose", "sunset"];
 
 const map = function (array, callback) {
   const results = [];

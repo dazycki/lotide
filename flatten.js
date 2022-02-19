@@ -1,3 +1,4 @@
+// FUNCTION IMPLEMENTATION ASSERT EQUAL
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,24 +7,24 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
+// FUNCTION IMPLEMENTATION ASSERT ARRAYS EQUALS
+const assertArraysEqual = function (arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
+    return false;
+  }
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
+      console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
       return false;
+    } else {
+      console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
+      return true;
     }
   }
-  return true;
 };
 
-const assertArraysEqual = function (arr1, arr2) {
-  if (eqArrays(arr1, arr2) === true) {
-    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
-
+// FLATTEN FUNCTION
 const flatten = function (arg) {
   let merged = [];
   if (Array.isArray(arg)) {
