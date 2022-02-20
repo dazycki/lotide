@@ -30,6 +30,10 @@ const takeUntil = function (array, callback) {
   return returnArr;
 };
 
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = takeUntil;
+
+//TEST CASES
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
 console.log(results1); //[ 1, 2, 5, 7, 2 ]
