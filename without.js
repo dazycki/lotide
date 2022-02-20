@@ -29,6 +29,9 @@ const without = function (source, itemsToRemove) {
   return arrayDifference
 };
 
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = without;
+
 //Test Cases
 assertArraysEqual((without([1, 2, 3], [1])), [2, 3]); //Pass
 assertArraysEqual((without(["1", "2", "3"], [1, 2, "3"])), ["1", "2"]); //Pass
