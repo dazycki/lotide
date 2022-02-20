@@ -1,8 +1,15 @@
-const eqArrays = require('../eqArrays'); //"Pull in" head function
-const assertEqual = require('../assertEqual'); //"Pull in" assertEqual function
+const assert = require('chai').assert;
+const eqArrays = require('../eqArrays'); //"Pull in" eqArrays function
 
 //Test cases for eqArrays function
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays(["Dave", 1, "Bob"], ["Dave", 1, "Bob"]), true); // => should PASS
-assertEqual(eqArrays([1, 2, "3"], [1, 2, 3]), true); // => should FAIL
-assertEqual(eqArrays([1, 2, "3"], ["3", 2, 1]), true); // => should FAIL
+describe("#eqArrays", () => {
+  it("returns true when comparing [1, 2, 3] and [1, 2, 3]", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+  });
+  it("returns false when comparing [1, 2, 3] and [1, 2, 2]", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 2]), false);
+  });
+  it("returns false when comparing ['Dave', 1, 'Bob'] and ['Dave', 1, 'Bob']", () => {
+    assert.deepEqual(eqArrays(['Dave', 1, 'Bob'], ['Dave', 1, 'Bob']), true);
+  });
+});
