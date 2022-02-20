@@ -14,6 +14,9 @@ const findKey = function(object, callback) {
   }
 };
 
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = findKey;
+
 //TEST CASES
 const testFunc1 = findKey({
   "Blue Hill": { stars: 1 },
