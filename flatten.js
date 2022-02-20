@@ -33,6 +33,9 @@ const flatten = function (arg) {
   return merged;
 };
 
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = flatten;
+
 //Test Cases
 assertArraysEqual((flatten([1, 2, [3, 4], 5, [6]])), [1, 2, 3, 4, 5, 6]); //PASS
 assertArraysEqual((flatten(["abc", ["efg", "hij"], "bob"])), ['abc', 'efg', 'hij', 'bob']); //PASS
