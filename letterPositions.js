@@ -33,6 +33,9 @@ const letterPositions = function (sentence) {
   return results;
 };
 
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = letterPositions;
+
 //TEST CASES
 assertArraysEqual(letterPositions("hello").h, [0]);
 assertArraysEqual(letterPositions("hello").e, [1]);
