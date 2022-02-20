@@ -22,6 +22,9 @@ const countLetters = function (sentance) {
   return results;
 }
 
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = countLetters;
+
 //TEST CASES
 const result1 = countLetters("test sentance");
 
