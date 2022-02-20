@@ -28,6 +28,9 @@ const map = function (array, callback) {
   return results;
 }
 
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = map;
+
 //TEST CASES
 assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't']);
 assertArraysEqual(map(words, word => word.length), [6, 7, 2, 5, 3]);
