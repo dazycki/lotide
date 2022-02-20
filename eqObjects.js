@@ -40,6 +40,9 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+//EXPORT FUNCTION FOR USE IN OTHER FILES
+module.exports = eqObjects;
+
 
 //TEST CASES
 const ab = { a: "1", b: "2" };
