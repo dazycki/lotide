@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const eqObjects = require('../eqObjects'); //"Pull in" eqObjects function
 
 //Test cases for eqObjects function
-describe("#tail", () => {
+describe("#eqObjects", () => {
   const ab = { a: "1", b: "2" };
   const ba = { b: "2", a: "1" };
   it("returns true when comparing ab and ba", () => {
